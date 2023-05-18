@@ -14,6 +14,8 @@ class Account:
             return "Signup successful"
         else:
             return "Password confirmation failed"
+account1 = Account("mumbua", 89087)
+print(account1.signup())
 
     def login(self):
         name = input("Enter your name: ")
@@ -24,9 +26,6 @@ class Account:
         else:
             return "Invalid name or password"
 
-
-account1 = Account("mumbua", 89087)
-print(account1.signup())
 
 account2 = Account("cynthia", 123456)
 print(account2.login())
