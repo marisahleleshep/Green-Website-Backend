@@ -8,6 +8,7 @@ class Review:
         print(f"Customer: {self.customer_name}")
         print(f"Rating: {self.rating}")
         print(f"Comment: {self.comment}")
+      
         
         
         # Create a review object
