@@ -25,7 +25,5 @@ print(account1.signup())
             return "Login successful"
         else:
             return "Invalid name or password"
-
-
 account2 = Account("cynthia", 123456)
 print(account2.login())
