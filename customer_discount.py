@@ -16,7 +16,7 @@ class Discount:
             return 0
 
     # Define a method to add a purchase amount to the total purchase
-     def add_purchase(self, amount):
+    def add_purchase(self, amount):
          if amount > 0:
             self.total_purchase += amount
          else:
