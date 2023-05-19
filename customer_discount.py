@@ -1,42 +1,30 @@
-# Define a class called Customer
+
+
+# create class discount for a customer
 class Discount:
-    # Define the constructor method to initialize the Customer object
-    def __init__(self, name, email, location, phoneNumber):
-        self.name = name
-        self.email = email
-        self.location = location
-        self.phoneNumber = phoneNumber
-        self.total_purchase = 0
-
-    # Define a method to calculate the discount based on total purchases
-    def discount(self):
-        if self.total_purchase >= 100:
-            return 0.1
+    def __init__(self, discount_type, discount_amount):
+        self.discount_type = discount_type
+        self.discount_amount = discount_amount
+    
+    def apply_discount(self, total):
+        if self.discount_type == 'percentage':
+            discounted_total = total * (1 - self.discount_amount / 100)
         else:
-            return 0
-
-    # Define a method to add a purchase amount to the total purchase
-    def add_purchase(self, amount):
-         if amount > 0:
-            self.total_purchase += amount
-         else:
-            print("Insurficient purchase amount")
-
-
-    # Define a method to remove a purchase amount from the total purchase
-    def remove_purchase(self, amount):
-        if self.total_purchase >= amount:
-            self.total_purchase -= amount
+            discounted_total = total - self.discount_amount
+        return discounted_total
+    
+    def get_discounted_price(self, price):
+        if self.discount_type == 'percentage':
+            discounted_price = price * (1 - self.discount_amount / 100)
         else:
-            print("The amount is greater than the total purchase.")
+            discounted_price = price - self.discount_amount
+        return discounted_price
+    # create a new instance of the Discount class
+discount = Discount('percentage', 20)
 
-
-# Create an instance of the Customer class
-customer1 = Discount("Mwangi", "mwangi@gmail.com", "Kasarani", "5234-456-987")
-customer1.add_purchase(120)
-print(customer1.total_purchase)   
-print(customer1.discount())  
-customer1.remove_purchase(50)
-print(customer1.total_purchase)  
+# get the discounted price of a product
+price = 100
+discounted_price = discount.get_discounted_price(price)
+print(f"The discounted price of the product is: {discounted_price}"
 
 
