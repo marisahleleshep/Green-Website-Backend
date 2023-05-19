@@ -1,29 +1,25 @@
-class Account:
-    def __init__(self, name, password):
-        self.name = name
+class Signup:
+    def __init__(self, email, username, password):
+        self.email = email
+        self.username = username
         self.password = password
-
-    def signup(self):
-        name = input("Enter your name: ")
-        password = input("Enter your password: ")
-        confirm_password = input("Confirm your password: ")
-
-        if password == confirm_password:
-            self.name = name
-            self.password = password
-            return "Signup successful"
+    def create_account(self):
+        # code to create a new user account using self.email, self.username, and self.password
+        print(f"Account with email '{self.email}', username '{self.username}', and password '{self.password}' has been created.")
+signup = Signup('chep@gmail.com', 'mercy', '454532')
+signup.create_account()
+class Login:
+    def __init__(self, username, password):
+        self.username = username
+        self.password = password
+    def check_details(self, username, password):
+        if self.username == username and self.password == password:
+            return True
         else:
-            return "Password confirmation failed"
-account1 = Account("mumbua", 89087)
-print(account1.signup())
-
-    def login(self):
-        name = input("Enter your name: ")
-        password = input("Enter your password: ")
-
-        if self.name == name and self.password == password:
-            return "Login successful"
-        else:
-            return "Invalid name or password"
-account2 = Account("cynthia", 123456)
-print(account2.login())
+            return False
+login = Login('username', 'password')
+valid = login.check_details('username', 'password')
+if valid:
+    print('Login successful')
+else:
+    print('Invalid username or password')
