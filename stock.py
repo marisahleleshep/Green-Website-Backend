@@ -13,11 +13,11 @@ class Stock:
         print(f"Price: {self.price}")
         # Creating a new stock object
 stock_item = Stock("Apples", 100, 2.5)
-# Displaying the initial stock details
+# the initial stock details
 stock_item.display_stock()
 # Updating the stock quantity
 stock_item.update_quantity(80)
 # Updating the stock price
 stock_item.update_price(2.0)
-# Displaying the updated stock details
+# display of the the updated stock details
 stock_item.display_stock()
