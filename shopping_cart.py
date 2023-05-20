@@ -20,8 +20,8 @@ class ShoppingCart:
         self.items = []
         return round(total_price, 2)
 
-item1 = Item("Item 1", 10.99)
-item2 = Item("Item 2", 5.99)
+item1 = Item("Apples", 10.99)
+item2 = Item("Oranges", 5.99)
 
 cart = ShoppingCart()
 cart.add_item(item1)
