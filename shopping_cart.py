@@ -11,7 +11,7 @@ class ShoppingCart:
         self.items.append(item)
 
     def remove_item(self, item_name):
-        for item in self.items.copy():
+        for item in self.items:
             if item.name == item_name:
                 self.items.remove(item)
 
