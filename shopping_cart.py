@@ -24,8 +24,8 @@ class ShoppingCart:
         self.items = []
         return round(total_price, 2)  # Round the total price to 2 decimal places
     
-item1 = Item("Item 1", 10.99)
-item2 = Item("Item 2", 5.99)
+item1 = Item("Berries", 10.99)
+item2 = Item("Pawpaw", 5.99)
 cart = ShoppingCart()
 cart.add_item(item1)
 cart.add_item(item2)
