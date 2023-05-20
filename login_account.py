@@ -5,7 +5,7 @@ class Signup:
         self.password = password
 
     def create_account(self):
-        # code to create a new user acount using self.email, self.username, and self.password
+        # create a new user acount using self.email, self.username, and self.password
         print(f"Account with email '{self.email}', username '{self.username}', and password '{self.password}' has been created.")
 
 
