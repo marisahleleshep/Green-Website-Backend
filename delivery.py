@@ -1,14 +1,15 @@
 import datetime
+from customer_order import customers_name
+from customer_order import ccustomer_address
+from customer_order import order_items
+
 
 class Order:
 
 
-  def __init__(self, id, customer_name, customer_address, order_date, order_items, order_total):
+  def __init__(self, id, order_date, order_total):
     self.id = id
-    self.customer_name = customer_name
-    self.customer_address = customer_address
     self.order_date = order_date
-    self.order_items = order_items
     self.order_total = order_total
 
   def get_delivery_status(self):
