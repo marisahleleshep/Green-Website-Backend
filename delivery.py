@@ -1,6 +1,6 @@
 import datetime
 
-class Customer_Order:
+class Order:
 
 
   def __init__(self, id, customer_name, customer_address, order_date, order_items, order_total):
@@ -26,7 +26,7 @@ class Customer_Order:
 
 
 # Create a customer order
-customer_order = Customer_Order(
+customer_order = Order(
   id=1273944,
   customer_name="Khadija Rihami",
   customer_address="123 Makutex Street, Starehe, Kongoea",
