@@ -1,6 +1,7 @@
+from customer_order import customer_name
+
 class Review:
-    def __init__(self, customer_name, rating, comment):
-        self.customer_name = customer_name
+    def __init__(self, rating, comment):
         self.rating = rating
         self.comment = comment
 
