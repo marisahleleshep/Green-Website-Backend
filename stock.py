@@ -1,8 +1,10 @@
+from shopping_cart import name
+from shopping_cart import price
+
 class Stock:
-    def __init__(self, name, quantity, price):
-        self.name = name
+    def __init__(self, quantity):
         self.quantity = quantity
-        self.price = price
+        
     def update_quantity(self, new_quantity):
         self.quantity = new_quantity
     def update_price(self, new_price):
