@@ -1,10 +1,10 @@
 # Define a class called Order
-from delivery import order_items
-from delivery import customer_name
 class Order:
-    def __init__(self,customer_email, order_date):
+    def __init__(self,customers_name, customer_email, order_date, order_items):
+        self.customers_name=customers_name
         self.customer_email = customer_email
         self.order_date = order_date
+        self.order_items=order_items
      
 
     def get_order_details(self):
