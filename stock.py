@@ -15,7 +15,7 @@ class Stock:
 stock_item = Stock("Apples", 100, 25.0)
 # the initial stock details
 stock_item.display_stock()
-# Updating the stock quantity
+#update the stock
 stock_item.update_quantity(80)
 # Updating the stock price
 stock_item.update_price(20.0)
