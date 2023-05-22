@@ -1,35 +1,41 @@
-class Item:
+class ShoppingCart:
+    def __init__(self):
+        self.items = []
 
+    def add_item(self, item):
+        self.items.append(item)
+
+    def remove_item(self, item_name):
+        self.items = [item for item in self.items if item.name != item_name]
+
+    def checkout(self):
+        total_price = sum(item.price for item in self.items)
+        self.items = []
+        return round(total_price, 2)
+
+class Item:
     def __init__(self, name, price):
         self.name = name
         self.price = price
 
-class ShoppingCart:
+    def __str__(self):
+        return f"{self.name}, ${self.price}"
 
-    def __init__(self):
-        self.items = []
-    def add_item(self, item):
-        self.items.append(item)
-    def remove_item(self, item_name):
-        for item in self.items:
-            if item.name == item_name:
-                self.items.remove(item)
-                break
+item1 = Item("Apples", 10.99)
+item2 = Item("Oranges", 5.99)
 
-    def checkout(self):
-
-        total_price = 0
-        for item in self.items:
-            total_price += item.price
-        self.items = []
-        return round(total_price, 2)  # Round the total price to 2 decimal places
-    
-item1 = Item("Berries", 10.99)
-item2 = Item("Pawpaw", 5.99)
 cart = ShoppingCart()
 cart.add_item(item1)
 cart.add_item(item2)
-print("Items in the cart:")
+
+# Create a list of dictionaries to hold the cart items
+items_dict_list = []
 for item in cart.items:
-    print(item.name)
-print("Total price:", cart.checkout()) 
+    items_dict_list.append({"name": item.name, "price": item.price})
+
+# Print the items in the cart as a list of dictionaries
+print("Items in the cart:")
+print(items_dict_list)
+
+# Print the total price
+print("Total price:", cart.checkout())
