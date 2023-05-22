@@ -1,28 +1,22 @@
 import datetime
 
 class Customer_Order:
-
-
   def __init__(self, customer_name, customer_address, order_date, order_items, order_total):
     self.customer_name = customer_name
     self.customer_address = customer_address
     self.order_date = order_date
     self.order_items = order_items
     self.order_total = order_total
+    self.id = None  # Add the id attribute
 
   def get_delivery_status(self):
-  
-
     delivery_status = {
-      "customer_order_id": self.id,
       "delivery_date": self.order_date,
       "delivery_time": "12:45 noon",
       "delivery_status": "Delivered",
       "delivery_address": self.customer_address,
     }
-    del delivery_status["customer_order_id"]
     return delivery_status
-
 
 # Create a customer order
 customer_order = Customer_Order(
